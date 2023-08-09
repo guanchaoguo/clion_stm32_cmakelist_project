@@ -1,0 +1,9 @@
+version: '3'
+services:
+  qemu_stm32:
+    container_name: qemu_stm32
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /stm32_p103_demos/demos/freertos_singlethread
+    command: [ "/bin/sh","-c","sleep 99999" ]
